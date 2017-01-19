@@ -13,6 +13,7 @@
 		A6EA4D971E309039005414CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EA4D951E309039005414CD /* Main.storyboard */; };
 		A6EA4D991E309039005414CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6EA4D981E309039005414CD /* Assets.xcassets */; };
 		A6EA4D9C1E309039005414CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EA4D9A1E309039005414CD /* LaunchScreen.storyboard */; };
+		A6EA4DA51E30B251005414CD /* UIButton+Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EA4DA41E30B251005414CD /* UIButton+Direction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		A6EA4D981E309039005414CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6EA4D9B1E309039005414CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6EA4D9D1E309039005414CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6EA4DA31E30B251005414CD /* UIButton+Direction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Direction.h"; sourceTree = "<group>"; };
+		A6EA4DA41E30B251005414CD /* UIButton+Direction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Direction.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				A6EA4D901E309039005414CD /* AppDelegate.m */,
 				A6EA4D921E309039005414CD /* ViewController.h */,
 				A6EA4D931E309039005414CD /* ViewController.m */,
+				A6EA4DA31E30B251005414CD /* UIButton+Direction.h */,
+				A6EA4DA41E30B251005414CD /* UIButton+Direction.m */,
 				A6EA4D951E309039005414CD /* Main.storyboard */,
 				A6EA4D981E309039005414CD /* Assets.xcassets */,
 				A6EA4D9A1E309039005414CD /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6EA4D941E309039005414CD /* ViewController.m in Sources */,
+				A6EA4DA51E30B251005414CD /* UIButton+Direction.m in Sources */,
 				A6EA4D911E309039005414CD /* AppDelegate.m in Sources */,
 				A6EA4D8E1E309039005414CD /* main.m in Sources */,
 			);
