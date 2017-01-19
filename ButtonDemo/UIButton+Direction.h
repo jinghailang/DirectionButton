@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, UIButtonDirection) {
 
 @interface UIButton (Direction)
 
+//title、image设置好之后再调用此方法
 -(void)applayDirection:(UIButtonDirection)direction imgTitleSpace:(CGFloat)margin;
 
 @end

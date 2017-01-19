@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIButton+Direction.h"
 
 @interface ViewController ()
 
@@ -28,10 +29,19 @@
     [_arrowBtn setTitle:@"哈哈" forState:UIControlStateNormal];
     [_arrowBtn setImage:downArrow forState:UIControlStateNormal];
     
-    [self topImage:_arrowBtn];
-    
+    //图片在文字上面的样式
+    [_arrowBtn applayDirection:UIButtonDirectionTop imgTitleSpace:5];
+    /*
+    //图片在文字左边的样式
+    [_arrowBtn applayDirection:UIButtonDirectionLeft imgTitleSpace:0];
+    //图片在文字下面的样式
+    [_arrowBtn applayDirection:UIButtonDirectionBottom imgTitleSpace:0];
+    //图片在文字右边的样式
+    [_arrowBtn applayDirection:UIButtonDirectionRight imgTitleSpace:0];
+    */
     [self.view addSubview:_arrowBtn];
     
+    //辅助线
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2.0, 0, 0.5, self.view.frame.size.height)];
     line.backgroundColor = [UIColor redColor];
     [self.view addSubview:line];
@@ -41,24 +51,6 @@
     [self.view addSubview:line1];
     
 }
-
--(void)topImage:(UIButton *)btn
-{
-    CGPoint contentCenterP = CGPointMake(btn.frame.size.width/2.0, btn.frame.size.height/2.0);
-    CGPoint imgOriginCenterP = btn.imageView.center;
-    CGPoint titleOriginCenterP = btn.titleLabel.center;
-    
-    CGSize contentSize = btn.frame.size;
-    CGSize imgSize = btn.imageView.frame.size;
-    CGSize titleSize = btn.titleLabel.frame.size;
-    
-    CGPoint imgChangedCenterP = CGPointMake(contentCenterP.x, (contentSize.height-titleSize.height-imgSize.height)/2.0+imgSize.height/2.0);
-    CGPoint titleChangedCenterP = CGPointMake(contentCenterP.x, (contentSize.height-titleSize.height-imgSize.height)/2.0+imgSize.height+titleSize.height/2.0);
-    
-    btn.imageEdgeInsets = UIEdgeInsetsMake(-(imgOriginCenterP.y-imgChangedCenterP.y)*2, (imgChangedCenterP.x-imgOriginCenterP.x)*2, 0, 0);
-    btn.titleEdgeInsets = UIEdgeInsetsMake(0, 0, -(titleChangedCenterP.y-titleOriginCenterP.y)*2, (titleOriginCenterP.x-titleChangedCenterP.x)*2);
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
